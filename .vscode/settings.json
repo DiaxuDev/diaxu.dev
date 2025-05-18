@@ -1,0 +1,9 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.preferences.importModuleSpecifier": "shortest",
+	"typescript.preferences.autoImportSpecifierExcludeRegexes": [
+		"@radix-ui/react-.*",
+		"next/dist",
+		"^lucide-react/dist/lucide-react.suffixed$"
+	]
+}
