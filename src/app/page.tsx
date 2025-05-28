@@ -1,28 +1,17 @@
+import { DiscordStatus } from "@/components/grid/DiscordStatus";
 import { Header } from "@/components/Header";
-import { Card, CardContent } from "@/components/ui/card";
-import { ClockIcon, MapPinIcon } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
 	return (
-		<div className="grid grid-cols-1 gap-8 px-8 md:grid-cols-[auto_1fr]">
+		<>
 			<Header />
-			<aside className="flex flex-col gap-6">
-				<Card className="gap-2">
-					<p className="flex items-center gap-2">
-						<MapPinIcon />
-						<span>Poland</span>
-					</p>
-					<p className="flex items-center gap-2">
-						<ClockIcon />
-						<span>{new Date().toLocaleTimeString("pl", { timeZone: "europe/warsaw" })}</span>
-					</p>
+			<div className="mx-2 grid grid-cols-12 gap-4 sm:mx-8">
+				<DiscordStatus className="col-span-8 col-start-1 row-span-2 sm:col-span-4" />
+				<Card className="col-start-9 -col-end-1 justify-center sm:col-start-5">
+					Delusional frontend dev thinking he&apos;s backend
 				</Card>
-			</aside>
-			<main>
-				<Card>
-					<CardContent>Delusional frontend dev considering himself backend</CardContent>
-				</Card>
-			</main>
-		</div>
+			</div>
+		</>
 	);
 }
